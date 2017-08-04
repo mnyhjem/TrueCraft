@@ -14,6 +14,11 @@ namespace TrueCraft.Client
         [STAThread]
         public static void Main(string[] args)
         {
+            if (args.Length == 0)
+            {
+                args = new[] {"127.0.0.1", "-"};
+            }
+
             UserSettings.Local = new UserSettings();
             UserSettings.Local.Load();
 

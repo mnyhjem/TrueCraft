@@ -117,6 +117,8 @@ namespace TrueCraft.Client
 
         protected override void Initialize()
         {
+            IsMouseVisible = true;
+
             InputModules = new List<IGameplayModule>();
             GraphicalModules = new List<IGameplayModule>();
 

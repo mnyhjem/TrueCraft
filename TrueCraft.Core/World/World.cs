@@ -329,7 +329,10 @@ namespace TrueCraft.Core.World
         public Coordinates3D FindBlockPosition(Coordinates3D coordinates, out IChunk chunk, bool generate = true)
         {
             if (coordinates.Y < 0 || coordinates.Y >= Chunk.Height)
+            {
                 throw new ArgumentOutOfRangeException("coordinates", "Coordinates are out of range");
+            }
+                
 
             int chunkX = coordinates.X / Chunk.Width;
             int chunkZ = coordinates.Z / Chunk.Depth;
